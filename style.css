@@ -1,0 +1,32 @@
+body{
+    font-family: comis san;
+}
+
+  .custom-navbar {
+    background-color: #7ED958 !important;
+  }
+
+  .custom-navbar .nav-link {
+    color: black !important;
+    font-weight: bold;
+  }
+
+  .custom-navbar .nav-link:hover {
+    color: white !important;
+  }
+
+  .custom-navbar .navbar-brand,
+  .custom-navbar .navbar-toggler-icon {
+    color: black !important;
+  }
+
+  .custom-navbar .btn-outline-success {
+    border-color: black;
+    color: black;
+  }
+
+  .custom-navbar .btn-outline-success:hover {
+    background-color: black;
+    color: white;
+  }
+
