@@ -9,10 +9,12 @@ body{
   .custom-navbar .nav-link {
     color: black !important;
     font-weight: bold;
+    font-size: 20px;
   }
 
   .custom-navbar .nav-link:hover {
     color: white !important;
+    
   }
 
   .custom-navbar .navbar-brand,
@@ -137,5 +139,18 @@ body{
 
 .contenido-card-atras a:hover {
   background-color: #0056b3;
+}
+
+.card-educate {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Esto ayuda a que se ajusten si no caben horizontalmente */
+}
+
+.container-cards:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
