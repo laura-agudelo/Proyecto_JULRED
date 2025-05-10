@@ -16,7 +16,6 @@
   <body>
     <div class="container-fluid m-auto">
       <!-- barra de navegacion -->
-
 <nav class="navbar navbar-expand-lg custom-navbar">
   <div class="container-fluid">
     <a href="index.html"><img src="images/logo JULRED.jpeg" alt="logo" width="90px"
@@ -63,7 +62,17 @@
     </div>
   </div>
 </nav>
-<footer style="background-color: #7ED958;">
+
+<!-- mapa SVG -->
+    <div class="container  position-relative">
+      <object type="image/svg+xml" data="images/co.svg" id="svg-map"></object>
+      <div id="infoCard" class="info-card">
+        <h5 id="infoTitle"></h5>
+        <p id="infoDesc"></p>
+      </div>
+    </div>
+
+<footer style="background-color: #1a2913; color: aliceblue;">
   <div class="container text-center mt-5 p-4">
       <div class="row">
           <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
@@ -88,6 +97,53 @@
 </footer>
 
 </div>
+
+<!-- script interactividad mapa -->
+ <script>
+  document.getElementById("svg-map").addEventListener("load", function () {
+    const svgDoc = this.contentDocument;
+    const infoCard = document.getElementById("infoCard");
+    const infoTitle = document.getElementById("infoTitle");
+    const infoDesc = document.getElementById("infoDesc");
+
+    // Aquí defines la información por nombre visible en el mapa
+    const regionesInfo = {
+      "Antioquia": "Región destacada por su desarrollo energético.",
+      "Bogotá": "Centro político y económico del país.",
+      "Valle del Cauca": "Zona industrial y agrícola importante."
+      // Puedes añadir más nombres que aparecen en tu SVG
+    };
+
+    // Seleccionamos todos los elementos <path> del SVG
+    const paths = svgDoc.querySelectorAll("path");
+
+    paths.forEach(path => {
+      const regionName = path.getAttribute("title") || path.getAttribute("name") || path.id;
+
+      if (!regionName) return;
+
+      path.style.cursor = "pointer";
+
+      path.addEventListener("mouseenter", (e) => {
+        path.style.fill = "#7ED958"; // color al hacer hover
+        const nombre = regionName.replace("CO-", "");
+        infoTitle.textContent = nombre;
+        infoDesc.textContent = regionesInfo[nombre] || "Información no disponible.";
+        infoCard.style.display = "block";
+      });
+
+      path.addEventListener("mousemove", (e) => {
+        infoCard.style.left = e.clientX + 15 + "px";
+        infoCard.style.top = e.clientY + 15 + "px";
+      });
+
+      path.addEventListener("mouseleave", () => {
+        path.style.fill = "";
+        infoCard.style.display = "none";
+      });
+    });
+  });
+</script>
 
 <script>
 // Función para calcular la distancia Levenshtein entre dos cadenas
