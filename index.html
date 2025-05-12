@@ -19,7 +19,6 @@
   <body>
     <div class="container-fluid m-auto">
       <!-- barra de navegacion -->
-      <!-- fragmento del navbar corregido -->
       <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
           <a href="index.html"><img src="images/logo JULRED.jpeg" alt="logo"
@@ -289,10 +288,33 @@
             <img src="images/icon1.png" alt="Empresa 5" />
             <img src="images/icon1.png" alt="Empresa 5" />
             <img src="images/icon1.png" alt="Empresa 5" />
-            
+
           </div>
         </div>
       </div>
+
+      <button onclick="scrollToTop()" id="scrollToTopBtn" title="Subir">
+        ↑
+      </button>
+      <nav aria-label="Paginador de secciones" style="margin-top: 49px;">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="index.html">Inicio</a>
+          </li>
+          <li class="page-item"><a class="page-link"
+              href="contexto.html">1</a></li>
+          <li class="page-item"><a class="page-link"
+              href="colombia.html">2</a></li>
+          <li class="page-item"><a class="page-link"
+              href="latam.html">3</a></li>
+          <li class="page-item"><a class="page-link"
+              href="mundo.html">4</a></li>
+          <li class="page-item"><a class="page-link"
+              href="evaluate.html">5</a></li>
+          <li class="page-item"><a class="page-link"
+              href="infografia.html">6</a></li>
+        </ul>
+      </nav>
 
       <footer style="background-color: #1a2913; color: aliceblue;">
         <div class="container text-center mt-5 p-4">
@@ -328,6 +350,24 @@
       </footer>
 
     </div>
+
+    <script>
+      // Mostrar/ocultar el botón
+window.onscroll = function() {
+  const btn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// Función para subir
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+    </script>
     <script>
       // Función para calcular la distancia Levenshtein entre dos cadenas
       function levenshtein(a, b) {

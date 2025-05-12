@@ -9,91 +9,236 @@
       rel="stylesheet"
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous">
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <title>Latam</title>
   </head>
   <body>
     <div class="container-fluid m-auto">
       <!-- barra de navegacion -->
-<nav class="navbar navbar-expand-lg custom-navbar">
-  <div class="container-fluid">
-    <a href="index.html"><img src="images/logo JULRED.jpeg" alt="logo" width="90px"
-        height="82px"
-        style="border-radius: 50%; margin-right: 20px;"></a>
-        <div class="d-lg-none text-center top-50 ">
-          <span class="fw-bold fs-4">Latam</span>
+      <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+          <a href="index.html"><img src="images/logo JULRED.jpeg" alt="logo"
+              width="90px"
+              height="82px"
+              style="border-radius: 50%; margin-right: 20px;"></a>
+          <div class="d-lg-none text-center top-50 ">
+            <span class="fw-bold fs-4">Latam</span>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"
+                  href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contexto.html">Contexto
+                  Energético</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="colombia.html">Colombia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="latam.html">Latam</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="mundo.html">Colombia en el
+                  mundo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="evaluate.html">Evaluate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="infografia.html">Infografía</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search"
+                placeholder="Busca una palabra clave" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit"
+                style="background-color: #96ad71;">Buscar</button>
+            </form>
+          </div>
         </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="contexto.html">Contexto Energético</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="colombia.html">Colombia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="latam.html">Latam</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="mundo.html">Colombia en el mundo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="evaluate.html">Evaluate</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="infografia.html">Infografía</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search"
-          placeholder="Busca una palabra clave" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
-    </div>
-  </div>
-</nav>
+      </nav>
 
-<video autoplay muted loop playsinline style="width: 100%; height: 40rem; object-fit: cover;">
-  <source src="video/git3.mp4" type="video/mp4">
-</video>
+      <video autoplay muted loop playsinline
+        style="width: 100%; height: 40rem; object-fit: cover;">
+        <source src="video/git3.mp4" type="video/mp4">
+      </video>
 
-<footer style="background-color: #1a2913; color: aliceblue;">
-  <div class="container text-center mt-5 p-4">
-      <div class="row">
-          <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Contactanos</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.</p>
-          </div>
-          <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Ayuda</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, repellendus.</p>
-          </div>
-          <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Siguenos</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptatibus!</p>
-              <i class="fa-brands fa-whatsapp" style="font-size: 30px; padding: 4px;"></i>
-              <i class="fa-brands fa-facebook" style="font-size: 30px; padding: 4px;"></i>
-              <i class="fa-brands fa-instagram" style="font-size: 30px; padding:4px;"></i>
-              <i class="fa-brands fa-x-twitter" style="font-size: 30px; padding:4px;"></i>
-          </div>
-          
+      <!-- Gráfico de barras: Consumo de energía en LatAm -->
+      <div class="container my-5">
+        <h2 class="text-center">Consumo de Energía en LatAm</h2>
+        <canvas id="latamEnergyChart"></canvas>
       </div>
-  </div>
-</footer>
 
-</div>
+      <!-- Gráfico de pastel: Tipos de energía en LatAm -->
+      <canvas id="latamEnergyPieChart" class="small-pie-chart"></canvas>
 
-<script>
+      <div class="container my-5">
+        <h2 class="text-center">Distribución de Tipos de Energía en LatAm</h2>
+        <canvas id="latamEnergyPieChart" width="10" height="10"></canvas>
+        <!-- Tamaño reducido -->
+      </div>
+
+      <div class="announcement-bar">
+        <div class="scroll-container mt-5">
+          <div class="scroll-text">
+            <img src="images/icon1.png" alt="Empresa 1" />
+            <img src="images/icon1.png" alt="Empresa 2" />
+            <img src="images/icon1.png" alt="Empresa 3" />
+            <img src="images/icon1.png" alt="Empresa 4" />
+            <img src="images/icon1.png" alt="Empresa 5" />
+            <img src="images/icon1.png" alt="Empresa 5" />
+            <img src="images/icon1.png" alt="Empresa 5" />
+
+          </div>
+        </div>
+      </div>
+       <button onclick="scrollToTop()" id="scrollToTopBtn" title="Subir">
+        ↑
+      </button>
+
+      <nav aria-label="Paginador de secciones" style="margin-top: 49px;">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="index.html">Inicio</a>
+          </li>
+          <li class="page-item"><a class="page-link"
+              href="contexto.html">1</a></li>
+          <li class="page-item"><a class="page-link"
+              href="colombia.html">2</a></li>
+          <li class="page-item"><a class="page-link"
+              href="latam.html">3</a></li>
+          <li class="page-item"><a class="page-link"
+              href="mundo.html">4</a></li>
+          <li class="page-item"><a class="page-link"
+              href="evaluate.html">5</a></li>
+          <li class="page-item"><a class="page-link"
+              href="infografia.html">6</a></li>
+        </ul>
+      </nav>
+
+      <footer style="background-color: #1a2913; color: aliceblue;">
+        <div class="container text-center mt-5 p-4">
+          <div class="row">
+            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
+              <h4>Contactanos</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Porro, voluptatibus! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Debitis, aliquam.</p>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
+              <h4>Ayuda</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Porro, voluptatibus! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Doloremque, repellendus.</p>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
+              <h4>Siguenos</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Porro, voluptatibus!</p>
+              <i class="fa-brands fa-whatsapp"
+                style="font-size: 30px; padding: 4px;"></i>
+              <i class="fa-brands fa-facebook"
+                style="font-size: 30px; padding: 4px;"></i>
+              <i class="fa-brands fa-instagram"
+                style="font-size: 30px; padding:4px;"></i>
+              <i class="fa-brands fa-x-twitter"
+                style="font-size: 30px; padding:4px;"></i>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <script>
+      // Mostrar/ocultar el botón
+window.onscroll = function() {
+  const btn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// Función para subir
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+    </script>
+    <script>
+  // Gráfico de barras
+  const ctxLatam = document.getElementById('latamEnergyChart').getContext('2d');
+  const latamEnergyChart = new Chart(ctxLatam, {
+    type: 'bar',
+    data: {
+      labels: ['Brasil', 'México', 'Argentina', 'Chile', 'Colombia', 'Perú'],
+      datasets: [{
+        label: 'Consumo Energético (TWh)',
+        data: [600, 350, 200, 120, 100, 85],
+         backgroundColor: [
+            '#6B8E23', // Verde oliva
+            '#4682B4', // Azul acero
+            '#A9A9A9', // Gris oscuro
+           '#8FBC8F',
+            '#BDB76B'  // Arena dorada
+          ],
+       borderColor: '#ffffff',
+          borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  // Gráfico de pastel
+  const ctxPie = document.getElementById('latamEnergyPieChart').getContext('2d');
+  const latamEnergyPieChart = new Chart(ctxPie, {
+    type: 'pie',
+    data: {
+      labels: ['Hidroeléctrica', 'Solar', 'Eólica', 'Fósiles'],
+      datasets: [{
+        data: [45, 30, 15, 10],
+        backgroundColor: ['#6B8E23', // Verde oliva
+  '#8FBC8F', // Verde medio suave
+  '#A9A9A9', // Gris oscuro
+  '#BDB76B', // Arena dorada
+  '#4682B4', // Azul acero
+  '#98FB98' ], // Verde claro paste],
+        borderColor: '#fff',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true
+    }
+  });
+</script>
+
+    <script>
 // Función para calcular la distancia Levenshtein entre dos cadenas
 function levenshtein(a, b) {
 const matrix = Array.from({ length: b.length + 1 }, (_, i) => [i]);
@@ -161,7 +306,10 @@ el.innerHTML = el.innerText;
 }
 });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"></script>
 
-</body>
+  </body>
 </html>
