@@ -77,8 +77,9 @@
       </video>
 
       <!-- Título del mapa -->
-      <div class="map-title">
-        <h2>Mapa Energético de Colombia</h2>
+      <div class="map-title container mt-5">
+        <h2>Mapa Energético de Colombia
+        </h2>
       </div>
 
       <!-- mapa SVG -->
@@ -91,8 +92,8 @@
       </div>
 
       <!-- Gráfica de uso de energías -->
-      <div class="container my-5">
-        <h3 class="text-center mb-4">Matriz Energética de Colombia - 2024</h3>
+     <div class="container my-5">
+        <h3 class="tituloGrafica mb-4">Matriz Energética de Colombia - 2024</h3>
         <div class="row justify-content-center">
           <div class="col-md-8">
             <canvas id="graficoEnergia"></canvas>
@@ -124,40 +125,59 @@
         </ul>
       </nav>
 
-      <footer style="background-color: #1a2913; color: aliceblue;">
-        <div class="container text-center mt-5 p-4">
-          <div class="row">
-            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Contactanos</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Porro, voluptatibus! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Debitis, aliquam.</p>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Ayuda</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Porro, voluptatibus! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Doloremque, repellendus.</p>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Siguenos</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Porro, voluptatibus!</p>
-              <i class="fa-brands fa-whatsapp"
-                style="font-size: 30px; padding: 4px;"></i>
-              <i class="fa-brands fa-facebook"
-                style="font-size: 30px; padding: 4px;"></i>
-              <i class="fa-brands fa-instagram"
-                style="font-size: 30px; padding:4px;"></i>
-              <i class="fa-brands fa-x-twitter"
-                style="font-size: 30px; padding:4px;"></i>
-            </div>
+        <footer class="position-relative  text-white py-4 mt-4"
+        style="background-color: #1a2913;">
+        <div
+          class="particles-container position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1 text-center">
+          <h5>JULRED - Siguenos</h5>
 
-          </div>
+          <a href="https://wa.me/1234567890" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-whatsapp mt-2 mb-3"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.facebook.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-facebook"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.instagram.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-instagram"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://twitter.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-x-twitter"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <p class="mb-0">© 2025 Todos los derechos reservados.</p>
+          <p>Desarrollado con 💻 por Laura Agudelo - Martin Osorio - Laura
+            Bermudez</p>
         </div>
       </footer>
 
     </div>
+
+      <script>
+  const container = document.querySelector('.particles-container');
+  for (let i = 0; i < 80; i++) {
+    const particle = document.createElement('div');
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.animationDuration = `${8 + Math.random() * 6}s`;
+    particle.style.animationDelay = `${Math.random() * 5}s`;
+    container.appendChild(particle);
+  }
+</script>
 
     <script>
       // Mostrar/ocultar el botón
@@ -185,11 +205,23 @@ function scrollToTop() {
     const infoTitle = document.getElementById("infoTitle");
     const infoDesc = document.getElementById("infoDesc");
 
-    // Aquí defines la información por nombre visible en el mapa
     const regionesInfo = {
-      "Antioquia": "Región destacada por su desarrollo energético.",
-      "Bogotá": "Centro político y económico del país.",
-      "Valle del Cauca": "Zona industrial y agrícola importante."
+      "Antioquia": "Principal generador hidroeléctrico del país con proyectos como HidroItuango, sede de EPM.",
+      "Distrito Capital de Bogotá": "Centro político y económico del país.",
+      "Valle del Cauca": " Alta demanda y uso de biomasa para generación de energía eléctrica.",
+      "Meta": "Principal productor de petróleo y gas (Campo Rubiales); proyectos solares en zonas rurales, con apoyo de Ecopetrol.",
+      "La Guajira":"Mayor potencial eólico y solar del país; sede de proyectos como Alpha y Beta de Enel Green Power.",
+      "Huila":"Gran capacidad hidroeléctrica (El Quimbo); expansión solar en zonas rurales con iniciativas de Isagen y programas del gobierno.",
+      "Santander":"Fuente importante de gas y energía térmica; proyectos solares en desarrollo.",
+      "Tolima":"Alta producción hidroeléctrica (Amoyá, Prado); potencial solar en expansión con apoyo de Celsia.",
+      "Cundinamarca":"Alto consumo (Bogotá) y generación hidroeléctrica (Guavio); Enel Colombia opera centrales y promueve energías limpias.",
+      "Casanare":"Importante en petróleo y gas; uso creciente de energía solar en zonas sin red, con participación de Ecopetrol y UPME",
+      "Boyacá":"Importante en hidroeléctricas pequeñas y minería energética; proyectos solares rurales y programas de electrificación",
+      "Córdoba":"Generación térmica y potencial en solar; desarrollo de proyectos solares con apoyo de UPME.",
+      "Atlántico":"Nodo eléctrico del Caribe, con plantas térmicas (Termoflores) y parques solares en expansión promovidos por Enel y privados.",
+      "Cauca":"Sede de la hidroeléctrica Salvajina; creciente implementación de paneles solares rurales con apoyo de Celsia y proyectos del MinEnergía.",
+      "Risaralda":"Hidroeléctricas pequeñas (Machuelo) y expansión solar en comunidades rurales",
+      "Quindío":"Alta demanda por su crecimiento urbano y turístico; además de iniciativas de Celsia en energías limpias."
       // Puedes añadir más nombres que aparecen en tu SVG
     };
 

@@ -72,6 +72,7 @@
       </nav>
 
       
+      
       <button onclick="scrollToTop()" id="scrollToTopBtn" title="Subir">
         ↑
       </button>
@@ -96,40 +97,60 @@
         </ul>
       </nav>
 
-      <footer style="background-color: #1a2913; color: aliceblue;">
-        <div class="container text-center mt-5 p-4">
-          <div class="row">
-            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Contactanos</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Porro, voluptatibus! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Debitis, aliquam.</p>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Ayuda</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Porro, voluptatibus! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Doloremque, repellendus.</p>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Siguenos</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Porro, voluptatibus!</p>
-              <i class="fa-brands fa-whatsapp"
-                style="font-size: 30px; padding: 4px;"></i>
-              <i class="fa-brands fa-facebook"
-                style="font-size: 30px; padding: 4px;"></i>
-              <i class="fa-brands fa-instagram"
-                style="font-size: 30px; padding:4px;"></i>
-              <i class="fa-brands fa-x-twitter"
-                style="font-size: 30px; padding:4px;"></i>
-            </div>
+      
+           <footer class="position-relative  text-white py-4 mt-4"
+        style="background-color: #1a2913;">
+        <div
+          class="particles-container position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1 text-center">
+          <h5>JULRED - Siguenos</h5>
 
-          </div>
+          <a href="https://wa.me/1234567890" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-whatsapp mt-2 mb-3"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.facebook.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-facebook"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.instagram.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-instagram"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://twitter.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-x-twitter"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <p class="mb-0">© 2025 Todos los derechos reservados.</p>
+          <p>Desarrollado con 💻 por Laura Agudelo - Martin Osorio - Laura
+            Bermudez</p>
         </div>
       </footer>
 
     </div>
+
+      <script>
+  const container = document.querySelector('.particles-container');
+  for (let i = 0; i < 80; i++) {
+    const particle = document.createElement('div');
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.animationDuration = `${8 + Math.random() * 6}s`;
+    particle.style.animationDelay = `${Math.random() * 5}s`;
+    container.appendChild(particle);
+  }
+</script>
 
     <script>
       // Mostrar/ocultar el botón

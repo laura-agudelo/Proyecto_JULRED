@@ -19,7 +19,6 @@
   <body>
     <div class="container-fluid m-auto">
       <!-- barra de navegacion -->
-      <!-- fragmento del navbar corregido -->
       <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
           <a href="index.html"><img src="images/logo JULRED.jpeg" alt="logo"
@@ -72,6 +71,95 @@
         </div>
       </nav>
 
+      <div class="video-container">
+        <video autoplay muted loop playsinline
+          style="width: 100%; height: 42rem; object-fit: cover; margin-top: 20px;">
+          <source src="video/hidro.mp4" type="video/mp4">
+        </video>
+
+        <div class="overlay-text">
+          <p class="split-text fw-bold" style="font-size: 120px;">
+            <span>H</span><span>o</span><span>l</span><span>a</span><span>,</span>
+            <span>&nbsp;</span>
+            <span>E</span><span>v</span><span>a</span><span>l</span><span>u</span><span>a</span><span>t</span><span>e</span><span>!</span>
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="info-container text-center mt-5 p-4 rounded shadow-lg bg-sucess">
+        <h4 class="fw-bold mb-4">¿Cómo funciona esta calculadora
+          energética?</h4>
+        <p>Esta herramienta te ayudará a conocer las mejores opciones para
+          reducir tu consumo energético mensual y optimizar tus costos.</p>
+        <hr class="my-3">
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-8">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Mes:</strong> Selecciona el
+                periodo de consumo.</li>
+              <li class="list-group-item"><strong>Consumo energético
+                  (kWh):</strong> La cantidad de energía utilizada en el
+                mes.</li>
+              <li class="list-group-item"><strong>Costo mensual:</strong> El
+                total a pagar en tu factura de electricidad.</li>
+            </ul>
+            <p class="mt-3">Con esta información, la calculadora te ofrece
+              alternativas como:</p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Instalación de paneles solares.</li>
+              <li class="list-group-item">Uso de electrodomésticos
+                eficientes.</li>
+              <li class="list-group-item">Revisión de tarifas con tu proveedor
+                de energía.</li>
+            </ul>
+            <p class="mt-3 mb-0 text-muted"><strong>Importante:</strong> Las
+              recomendaciones son solo guías. Consulta con un experto para un
+              análisis más detallado.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container form-container">
+        <h2 class="mb-4 text-center">Formulario de Consulta Energética</h2>
+        <form id="energyForm">
+          <div class="mb-3">
+            <label for="month" class="form-label">Mes</label>
+            <input type="month" class="form-control" id="month" required>
+          </div>
+          <div class="mb-3">
+            <label for="consumption" class="form-label">Consumo energético
+              (kWh)</label>
+            <input type="number" class="form-control" id="consumption"
+              placeholder="Ej: 300" required>
+          </div>
+          <div class="mb-3">
+            <label for="cost" class="form-label">Costo mensual ($)</label>
+            <input type="number" class="form-control" id="cost"
+              placeholder="Ej: 150000" required>
+          </div>
+          <button type="button" class="btn btn-primary me-2"
+            onclick="showAlternatives()">Ver Opciones Alternativas</button>
+          <button type="button" class="btn btn-success"
+            onclick="downloadPDF()">Descargar PDF</button>
+        </form>
+
+        <div id="result" class="mt-4" style="display:none;">
+          <h5>Opciones Energéticas Alternativas</h5>
+          <ul>
+            <li>Instalación de paneles solares: ahorro estimado del 30%</li>
+            <li>Uso de electrodomésticos eficientes: ahorro de hasta 20%</li>
+            <li>Revisión de tarifas de energía con el proveedor</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- JS: Bootstrap + jsPDF -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
       <button onclick="scrollToTop()" id="scrollToTopBtn" title="Subir">
         ↑
       </button>
@@ -96,40 +184,128 @@
         </ul>
       </nav>
 
-      <footer style="background-color: #1a2913; color: aliceblue;">
-        <div class="container text-center mt-5 p-4">
-          <div class="row">
-            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Contactanos</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Porro, voluptatibus! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Debitis, aliquam.</p>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Ayuda</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Porro, voluptatibus! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Doloremque, repellendus.</p>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
-              <h4>Siguenos</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Porro, voluptatibus!</p>
-              <i class="fa-brands fa-whatsapp"
-                style="font-size: 30px; padding: 4px;"></i>
-              <i class="fa-brands fa-facebook"
-                style="font-size: 30px; padding: 4px;"></i>
-              <i class="fa-brands fa-instagram"
-                style="font-size: 30px; padding:4px;"></i>
-              <i class="fa-brands fa-x-twitter"
-                style="font-size: 30px; padding:4px;"></i>
-            </div>
+      <footer class="position-relative  text-white py-4 mt-4"
+        style="background-color: #1a2913;">
+        <div
+          class="particles-container position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1 text-center">
+          <h5>JULRED - Siguenos</h5>
 
-          </div>
+          <a href="https://wa.me/1234567890" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-whatsapp mt-2 mb-3"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.facebook.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-facebook"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.instagram.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-instagram"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://twitter.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-x-twitter"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <p class="mb-0">© 2025 Todos los derechos reservados.</p>
+          <p>Desarrollado con 💻 por Laura Agudelo - Martin Osorio - Laura
+            Bermudez</p>
         </div>
       </footer>
 
     </div>
+    <script>
+     const container = document.querySelector('.particles-container');
+  for (let i = 0; i < 80; i++) {
+    const particle = document.createElement('div');
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.animationDuration = `${8 + Math.random() * 6}s`;
+    particle.style.animationDelay = `${Math.random() * 5}s`;
+    container.appendChild(particle);
+  }
+</script>
+
+    <script>
+  function showAlternatives() {
+  const consumption = parseFloat(document.getElementById('consumption').value);
+  const cost = parseFloat(document.getElementById('cost').value);
+  let recommendation = "";
+
+  if (isNaN(consumption) || isNaN(cost)) {
+    alert("Por favor, completa todos los campos correctamente.");
+    return;
+  }
+
+  if (consumption >= 400 && cost >= 200000) {
+    recommendation = "Se recomienda instalar paneles solares para un ahorro considerable a largo plazo.";
+  } else if ((consumption >= 250 && consumption < 400) || (cost >= 120000 && cost < 200000)) {
+    recommendation = "Se recomienda cambiar a electrodomésticos eficientes para reducir el consumo.";
+  } else if (consumption < 250 && cost < 120000) {
+    recommendation = "Se recomienda revisar las tarifas del proveedor para verificar si hay mejores planes.";
+  } else {
+    recommendation = "Su perfil de consumo sugiere que podría beneficiarse de una combinación de opciones: eficiencia energética, energías renovables y revisión tarifaria.";
+  }
+
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('result').innerHTML = `
+    <h5>Opciones Energéticas Alternativas</h5>
+    <ul>
+      <li>Instalación de paneles solares: ahorro estimado del 30%</li>
+      <li>Uso de electrodomésticos eficientes: ahorro de hasta 20%</li>
+      <li>Revisión de tarifas de energía con el proveedor</li>
+    </ul>
+    <div class="alert alert-info mt-3"><strong>Recomendación:</strong> ${recommendation}</div>
+  `;
+}
+
+
+  async function downloadPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const month = document.getElementById('month').value;
+    const consumption = parseFloat(document.getElementById('consumption').value);
+    const cost = parseFloat(document.getElementById('cost').value);
+    let recommendation = "";
+
+    if (consumption >= 500 && cost >= 250000) {
+      recommendation = "Se recomienda instalar paneles solares.";
+    } else if (consumption >= 300 && consumption <= 500 && cost >= 150000 && cost <= 250000) {
+      recommendation = "Se recomienda usar electrodomésticos eficientes.";
+    } else if (consumption < 300 && cost < 150000) {
+      recommendation = "Se recomienda revisar su tarifa de energía.";
+    } else {
+      recommendation = "Considere una combinación de opciones según su perfil de consumo.";
+    }
+
+    doc.text("Consulta Energética Mensual", 20, 20);
+    doc.text(`Mes: ${month}`, 20, 30);
+    doc.text(`Consumo: ${consumption} kWh`, 20, 40);
+    doc.text(`Costo: $${cost}`, 20, 50);
+
+    doc.text("Opciones Alternativas:", 20, 65);
+    doc.text("- Paneles solares: ahorro estimado del 30%", 25, 75);
+    doc.text("- Electrodomésticos eficientes: hasta 20%", 25, 85);
+    doc.text("- Revisar tarifas de energía", 25, 95);
+
+    doc.text("Recomendación personalizada:", 20, 115);
+    doc.text(recommendation, 25, 125);
+
+    doc.save("consulta_energetica.pdf");
+  }
+</script>
 
     <script>// Mostrar/ocultar el botón
 window.onscroll = function() {
