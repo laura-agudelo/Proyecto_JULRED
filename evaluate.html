@@ -63,7 +63,7 @@
     </nav>
 
     <div class="video-container">
-      <video autoplay muted loop playsinline style="width: 100%; height: 42rem; object-fit: cover; margin-top: 20px;">
+      <video autoplay muted loop playsinline style="width: 100%; height: 40rem; object-fit: cover; margin-top: 20px;">
         <source src="video/hidro.mp4" type="video/mp4">
       </video>
 
@@ -76,69 +76,170 @@
       </div>
     </div>
 
-    <div class="info-container text-center mt-5 p-4 rounded shadow-lg bg-sucess">
-      <h4 class="fw-bold mb-4">¿Cómo funciona esta calculadora
-        energética?</h4>
-      <p>Esta herramienta te ayudará a conocer las mejores opciones para
-        reducir tu consumo energético mensual y optimizar tus costos.</p>
-      <hr class="my-3">
-      <div class="row justify-content-center">
-        <div class="col-md-10 col-lg-8">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>Mes:</strong> Selecciona el
-              periodo de consumo.</li>
-            <li class="list-group-item"><strong>Consumo energético
-                (kWh):</strong> La cantidad de energía utilizada en el
-              mes.</li>
-            <li class="list-group-item"><strong>Costo mensual:</strong> El
-              total a pagar en tu factura de electricidad.</li>
-          </ul>
-          <p class="mt-3">Con esta información, la calculadora te ofrece
-            alternativas como:</p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Instalación de paneles solares.</li>
-            <li class="list-group-item">Uso de electrodomésticos
-              eficientes.</li>
-            <li class="list-group-item">Revisión de tarifas con tu proveedor
-              de energía.</li>
-          </ul>
-          <p class="mt-3 mb-0 text-muted"><strong>Importante:</strong> Las
-            recomendaciones son solo guías. Consulta con un experto para un
-            análisis más detallado.</p>
+  <div class="container my-5 mt-5 mb-5">
+        <div id="carruselInformativo" class="carousel slide"
+          data-bs-ride="carousel">
+          <div class="carousel-inner"
+            style="background-color: rgba(0, 0, 0, 0.01); border-radius: 20px; height: 350px;">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row align-items-center p-3">
+                <div class="col-md-6">
+                  <h2 class=" text-center fw-bold"
+                    style="font-size: 40px; font-family: Nunito;">¿Cómo funciona
+                    esta
+                    calculadora
+                    energética?</h2>
+                  <p style="font-family: Roboto Mono; display: flex; text-align: justify;">Esta
+                    herramienta te ayudará a conocer las mejores opciones
+                    para
+                    reducir tu consumo energético mensual y optimizar tus
+                    costos.</p>
+                </div>
+                <div class="col-md-6 h-75">
+                  <img src="/images/edu01.jpg"
+                    class="img-fluid rounded imgEvaluate" alt="Imagen 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row align-items-center p-3">
+                <div class="col-md-6 order-md-1">
+                  <h2 class=" text-center fw-bold"
+                    style="font-size: 30px; font-family: Nunito;">Formulario de
+                    Consulta Energetica</h2>
+                  <h5 class="fw-bold">Mes</h5>
+                  <p style="font-family: Roboto Mono; background-color: #bed6af; border-radius: 5px; padding: 2px;">Selecciona el periodo de consumo.</p>
+                  <h5 class="fw-bold">Consumo energético
+                    (kWh)</h5>
+                  <p style="font-family: Roboto Mono; background-color: #bed6af; border-radius: 5px; padding: 2px;">La cantidad de energía utilizada en el
+                    mes.</p>
+                  <h5 class="fw-bold">Costo Mensual ($)</h5>
+                  <p style="font-family: Roboto Mono; background-color: #bed6af; border-radius: 5px; padding: 2px;">El
+                    total a pagar en tu factura de electricidad.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="/images/edu02.jpg"
+                    class="img-fluid rounded imgEvaluate" alt="Imagen 2">
+                </div>
+
+              </div>
+            </div>
+
+          <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="row align-items-center p-3">
+                <div class="col-md-6">
+                  <h2 class=" text-center fw-bold pb-4"
+                    style="font-family: Nunito;">Con esta información, la calculadora te ofrece
+                    alternativas como:</h2>
+                  <li style="font-family: Roboto Mono;">Instalación de paneles
+                    solares.</li>
+                  <li style="font-family: Roboto Mono;">Uso de electrodomésticos
+                    eficientes.</li>
+                  <li style="font-family: Roboto Mono;">Revisión de tarifas con tu proveedor
+                    de energía.</li>
+                </div>
+                  <div class="col-md-6">
+                  <img src="/images/edu03.jpg"
+                    class="img-fluid rounded imgEvaluate" alt="Imagen 3">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles -->
+          <button class="carousel-control-prev" type="button"
+            data-bs-target="#carruselInformativo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button"
+            data-bs-target="#carruselInformativo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
         </div>
       </div>
-    </div>
 
-    <div class="container form-container">
-      <h2 class="mb-4 text-center">Formulario de Consulta Energética</h2>
-      <form id="energyForm">
-        <div class="mb-3">
-          <label for="month" class="form-label">Mes</label>
-          <input type="month" class="form-control" id="month" required>
+  <div class="container mt-5">
+        <div class="card shadow-lg">
+            <div class="card-header bg-success text-white text-center">
+                <h2>Calculadora Energética Inteligente</h2>
+                <p>Optimiza tu consumo y ahorra en tu factura eléctrica</p>
+            </div>
+            <div class="card-body">
+                <form id="energyForm">
+                    <div class="form-group">
+                        <label for="month">Mes de consumo:</label>
+                        <select class="form-control" id="month">
+                            <option value="">Selecciona un mes</option>
+                            <option value="enero">Enero</option>
+                            <option value="febrero">Febrero</option>
+                            <option value="marzo">Marzo</option>
+                            <option value="abril">Abril</option>
+                            <option value="mayo">Mayo</option>
+                            <option value="junio">Junio</option>
+                            <option value="julio">Julio</option>
+                            <option value="agosto">Agosto</option>
+                            <option value="septiembre">Septiembre</option>
+                            <option value="octubre">Octubre</option>
+                            <option value="noviembre">Noviembre</option>
+                            <option value="diciembre">Diciembre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="consumption">Consumo energético (kWh):</label>
+                        <input type="number" class="form-control" id="consumption" placeholder="Ej: 350" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cost">Costo mensual ($):</label>
+                        <input type="number" class="form-control" id="cost" placeholder="Ej: 150000" required>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="calculateSavings()">Calcular ahorro</button>
+                    <button type="button" class="btn btn-danger btn-block mt-2" onclick="downloadPDF()">Descargar informe PDF</button>
+                </form>
+                
+                <div id="results" class="mt-4 d-none">
+                    <h5>Opciones Energéticas Alternativas</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">🔆 Instalación de paneles solares: ahorro estimado del 30%</li>
+                        <li class="list-group-item">⚡ Uso de electrodomésticos eficientes: ahorro de hasta 20%</li>
+                        <li class="list-group-item">💡 Revisión de tarifas de energía con el proveedor</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-footer text-center bg-light">
+                <small>Importante: Las recomendaciones son guías generales. Consulta con un experto para un análisis más detallado.</small>
+            </div>
         </div>
-        <div class="mb-3">
-          <label for="consumption" class="form-label">Consumo energético
-            (kWh)</label>
-          <input type="number" class="form-control" id="consumption" placeholder="Ej: 300" required>
-        </div>
-        <div class="mb-3">
-          <label for="cost" class="form-label">Costo mensual ($)</label>
-          <input type="number" class="form-control" id="cost" placeholder="Ej: 150000" required>
-        </div>
-        <button type="button" class="btn btn-primary me-2" onclick="showAlternatives()">Ver Opciones
-          Alternativas</button>
-        <button type="button" class="btn btn-success" onclick="downloadPDF()">Descargar PDF</button>
-      </form>
-
-      <div id="result" class="mt-4" style="display:none;">
-        <h5>Opciones Energéticas Alternativas</h5>
-        <ul>
-          <li>Instalación de paneles solares: ahorro estimado del 30%</li>
-          <li>Uso de electrodomésticos eficientes: ahorro de hasta 20%</li>
-          <li>Revisión de tarifas de energía con el proveedor</li>
-        </ul>
-      </div>
     </div>
+<script>
+  function calculateSavings() {
+    const consumption = parseInt(document.getElementById('consumption').value) || 0;
+    const cost = parseInt(document.getElementById('cost').value) || 0;
+
+    if (consumption <= 0 || cost <= 0) {
+        alert('Por favor, introduce valores válidos para el consumo y el costo.');
+        return;
+    }
+
+    document.getElementById('results').classList.remove('d-none');
+
+    const elements = document.querySelectorAll('.list-group-item');
+    elements.forEach((el, index) => {
+        el.classList.add('animate-in');
+        el.style.animationDelay = (index * 0.1) + 's';
+    });
+}
+
+function downloadPDF() {
+    window.print();
+}
+</script>
 
     <!-- JS: Bootstrap + jsPDF -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -262,13 +363,13 @@
       doc.setFontSize(16);
       doc.setTextColor(0, 102, 153);
       doc.setFillColor(230, 240, 255);
-      doc.rect(15, 15, 180, 15, "F");
+      doc.rect(15, 15, 140, 15, "F");
       doc.text("Consulta Energética Mensual", 20, 25);
 
       // Línea decorativa
       doc.setDrawColor(0, 102, 153);
-      doc.setLineWidth(0.5);
-      doc.line(15, 32, 195, 32);
+      doc.setLineWidth(0.15);
+      doc.line(15, 32, 190, 32);
 
       // Contenido
       doc.setFont("helvetica", "normal");
