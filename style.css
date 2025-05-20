@@ -51,7 +51,6 @@ body {
   transition: background-color 0.3s ease;
 } */
 
-/* Contenedor de las cards */
 .content-card {
   display: flex;
   flex-wrap: wrap;
@@ -59,14 +58,12 @@ body {
   justify-content: center;
 }
 
-/* Estilos para cada card */
 .card-flip {
   width: 300px;
   height: 400px;
   perspective: 1000px;
 }
 
-/* Estilo del interior de la card para el flip */
 .card {
   width: 100%;
   height: 100%;
@@ -80,7 +77,6 @@ body {
   transform: rotateY(180deg);
 }
 
-/* Estilo de las caras de la tarjeta */
 .card-delantera, .card-atras {
   position: absolute;
   width: 100%;
@@ -160,7 +156,6 @@ body {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  /* Esto ayuda a que se ajusten si no caben horizontalmente */
 }
 
 .card-delantera2 .bg {
@@ -514,8 +509,11 @@ svg {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Al pasar el mouse, un poco de efecto */
 .circular-scroll-track img:hover {
+  transform: scale(1.05) rotateY(0deg);
+}
+
+.announcement-bar img:hover {
   transform: scale(1.05) rotateY(0deg);
 }
 
@@ -728,7 +726,7 @@ hr {
     }
 
      .card-back {
-      font-size: 14px;      /* más pequeña */
+      font-size: 14px;      
       font-weight: 400; 
       line-height: 1.4;
       background-color: #1a2913;
