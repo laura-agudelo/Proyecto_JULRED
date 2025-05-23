@@ -268,8 +268,22 @@ function scrollToTop() {
           datasets: [{
             label: 'Consumo Energético (TWh)', // Nombre del conjunto de datos
             data: [60, 4000, 6000, 1200, 1200], // Datos de consumo energético (en TWh)
-            backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo de las barras
-            borderColor: 'rgba(54, 162, 235, 1)', // Color del borde de las barras
+            backgroundColor: [
+                    '#8FA663', // Solar
+                    '#A9BE82', // Eólica 
+                    '#BBD39C', // Hidroeléctrica
+                    '#D3D3D3', // Carbón 
+                    '#AAAAAA', // Gas Natural 
+                    '#666666'  // Petróleo 
+                ],
+             borderColor: [
+                    '#6F854A', // Solar
+                    '#90A25E', // Eólica
+                    '#A5BD88', // Hidroeléctrica
+                    '#C0C0C0', // Carbón
+                    '#999999', // Gas Natural
+                    '#444444'  // Petróleo
+                ],
             borderWidth: 1
           }]
         },
