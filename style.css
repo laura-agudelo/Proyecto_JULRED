@@ -1571,18 +1571,9 @@ hr {
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-#scrollToTopBtn:hover {
-  background-color: #218838;
-  transform: translateY(-2px);
-}
 
-/* Highlight para búsqueda (si no existe) */
-.highlight {
-  background-color: yellow;
-  padding: 2px 4px;
-  border-radius: 3px;
-  font-weight: bold;
-}
+
+
 
 /* Form container base (si no existe) */
 .form-container {
